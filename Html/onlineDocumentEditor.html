@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+
 <script src='../JavaScript/HomePageController.js'></script>
 <link rel='stylesheet' href="../CSS/homeStyleSheet.css">
 <head>
 <div ng-app="myApp" ng-controller="homeController">
-<div id="navbar">
-<input id="fontColor" type="color" ng-init="colorSelect='pink'" ng-init="colorSelect=white" ng-model="colorSelect"></input> Font
-<input id="backgroundColor" type="color" ng-init="backgroundColorSelect='white'" ng-model="backgroundColorSelect"></input> Backgound
+<div id="iconBar">
+<input id="fontColor" type="color" ng-init="colorSelect='pink'" ng-init="colorSelect=white" ng-model="colorSelect">Font</input>
+<input id="backgroundColor" type="color" ng-init="backgroundColorSelect='white'" ng-model="backgroundColorSelect">Backgound</input>
+<button class="glyphicon glyphicon-align-left" ng-init="align='left'" onclick="leftP();"></button>
+<button class="glyphicon glyphicon-align-center" onclick="centerP();"></button>
+<button class="glyphicon glyphicon-align-right" onclick="rightP();"></button>
+<button class="glyphicon glyphicon-align-justify" onclick="justifyP();"></button>
+
+<button onclick="">Export!</button>
 </div>
 </head>
-
+<textarea id="myP" contenteditable="true" style="font-size:14px; font-weight:bold; color: {{colorSelect}}; background-color: {{backgroundColorSelect}}; width:100%; height:1000px">{{align}}</textarea>
 <body>
 <style>
 ::placeholder{
 color: colorSelect;
 }
 </style>
-<button onclick="downloadInnerHtml('filename', 'main')">Export!</button>
-<textarea type="input" ng-model="text" id="main" class="WordSelection1" style="font-size:14px; font-weight:bold; color: {{colorSelect}}; background-color: {{backgroundColorSelect}}; width:100%; height:1000px" placeholder="Type Here"></textarea>
 </div>
 
 

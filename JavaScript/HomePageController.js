@@ -1,7 +1,7 @@
 var app = angular.module('myApp', []);
 app.controller('homeController', function($scope) {
     //$scope.colors = ["purple", "blue", "green", "pink", "white", "black"];
-
+});
 
 /*function downloadInnerHtml(filename, elId){
   var ehtml = document.getElementById(elId).innerHTML;
@@ -13,17 +13,18 @@ app.controller('homeController', function($scope) {
 //  downloadInnerHtml(filename, 'main');
 }*/
 
-window.onscroll = function() {myFunction()};
+function centerP() {
+    document.getElementById("myP").style.textAlign = "center";
+}
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+function leftP() {
+    document.getElementById("myP").style.textAlign = "left";
+}
 
-	function myFunction() {
-	  if (window.pageYOffset >= sticky) {
-	    navbar.classList.add("sticky")
-	  } else {
-	    navbar.classList.remove("sticky");
-	  }
-	}
-});
+function rightP() {
+    document.getElementById("myP").style.textAlign = "right";
+}
 
+function justifyP() {
+    document.getElementById("myP").style.textAlign = "justify";
+}
