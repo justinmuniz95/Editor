@@ -28,3 +28,9 @@ function rightP() {
 function justifyP() {
     document.getElementById("myP").style.textAlign = "justify";
 }
+//for exporting doc
+jQuery(document).ready(function($) {
+    $("a.word-export").click(function(event) {
+        $("#page-content").wordExport();
+    });
+});

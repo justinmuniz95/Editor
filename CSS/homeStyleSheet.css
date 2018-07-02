@@ -4,6 +4,10 @@ background-color:black;
 }
 
 #alignImages{
-  color:bkacj;
+  color:black;
 
+}
+
+::placeholder{
+color: colorSelect;
 }
