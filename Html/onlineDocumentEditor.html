@@ -9,8 +9,8 @@
 <script src='../JavaScript/HomePageController.js'></script>
 <link rel='stylesheet' href="../CSS/homeStyleSheet.css">
 <head>
-<div id="border">
-<div ng-app="myApp" ng-controller="homeController" style="padding:0px; margin:0px;" id="random">
+<div ng-app="myApp" ng-controller="homeController" id="border" style="border-style: solid; border-color: {{colorSelect}};">
+<div style="padding:0px; margin:0px;" id="random">
 <div id="iconBar" style="padding:0px; margin:0px;">
 <input id="fontColor width" class="glyphicon glyphicon-text-color" style="color:{{colorSelect}}; background:white;" type="color" ng-init="colorSelect='#000000'" ng-init="colorSelect=white" ng-model="colorSelect"></input>
 <input id="backgroundColor width" type="color" style="color:{{backgroundColorSelect}}; background:white;" class="glyphicon glyphicon-text-background" ng-init="backgroundColorSelect='#DCDCDC'" ng-model="backgroundColorSelect"></input>
@@ -20,7 +20,7 @@
 <button class="glyphicon glyphicon-align-justify" id="alignImages" onclick="justifyP();"></button>
 <a class="word-export glyphicon glyphicon-download-alt" href="javascript:void(0)"> Download</a>
 <div class="slidecontainer" id="width">
-  <input type="range" min="1" max="100" value="20" ng-init="fontSize=20" ng-model="fontSize" class="slider" id="myRange">
+  <input type="range" min="12" max="100" value="20" ng-init="fontSize=20" ng-model="fontSize" class="slider" id="myRange">
   <p>Font Size: {{fontSize}} <span id="demo"></span></p>
 </div>
 </div>
