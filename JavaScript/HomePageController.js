@@ -1,26 +1,26 @@
 var app = angular.module('myApp', []);
 app.controller('homeController', function($scope) {
-    //$scope.colors = ["purple", "blue", "green", "pink", "white", "black"];
+  //$scope.colors = ["purple", "blue", "green", "pink", "white", "black"];
 });
 
 function centerP() {
-    document.getElementById("myP").style.textAlign = "center";
+  document.getElementById("myP").style.textAlign = "center";
 }
 
 function leftP() {
-    document.getElementById("myP").style.textAlign = "left";
+  document.getElementById("myP").style.textAlign = "left";
 }
 
 function rightP() {
-    document.getElementById("myP").style.textAlign = "right";
+  document.getElementById("myP").style.textAlign = "right";
 }
 
 function justifyP() {
-    document.getElementById("myP").style.textAlign = "justify";
+  document.getElementById("myP").style.textAlign = "justify";
 }
 //for exporting doc
 jQuery(document).ready(function($) {
-    $("a.word-export").click(function(event) {
-        $("#page-content").wordExport();
-    });
+  $("a.word-export").click(function(event) {
+    $("#page-content").wordExport();
+  });
 });
