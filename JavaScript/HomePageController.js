@@ -1,6 +1,9 @@
 var app = angular.module('myApp', []);
 app.controller('homeController', function($scope) {
+  scope = $scope;
   //$scope.colors = ["purple", "blue", "green", "pink", "white", "black"];
+  scope.fonts = ["Normal", "Italic", "Oblique"];
+
 });
 
 function centerP() {

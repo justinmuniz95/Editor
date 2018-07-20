@@ -2,6 +2,12 @@ body{
   padding: 0;
   margin: 0;
 }
+
+p:empty:not(:focus)::before {
+  content: attr(data-placeholder);
+}
+
+
 #iconBar{
   background-color:black;
   color:white;
