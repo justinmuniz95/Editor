@@ -1,8 +1,22 @@
 var app = angular.module('myApp', []);
 app.controller('homeController', function($scope) {
-  scope = $scope;
-  //$scope.colors = ["purple", "blue", "green", "pink", "white", "black"];
-  scope.fonts = ["Normal", "Italic", "Oblique"];
+  $scope.fonts = ["Times New Roman", "Comic Sans MS", "Impact"];
+
+  setInterval(function(){ 
+    content = document.getElementById("myP").innerHTML;
+    if (content != "") {
+      document.getElementById("wordCountId").innerHTML = "Word Count: " + content.split(" ").length;
+    } else {
+      document.getElementById("wordCountId").innerHTML = "Word Count: 0";
+    }
+  }, 1000);
+
+  //for exporting doc
+  jQuery(document).ready(function($) {
+    $("a.word-export").click(function(event) {
+      $("#page-content").wordExport($scope.fileName);
+    });
+  });
 
 });
 
@@ -21,9 +35,3 @@ function rightP() {
 function justifyP() {
   document.getElementById("myP").style.textAlign = "justify";
 }
-//for exporting doc
-jQuery(document).ready(function($) {
-  $("a.word-export").click(function(event) {
-    $("#page-content").wordExport();
-  });
-});
