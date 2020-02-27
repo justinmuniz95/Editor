@@ -5,6 +5,7 @@
 <script src="../plugins/jquery.wordexport.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=ABeeZee|Amatic+SC|Cormorant+Garamond|Dancing+Script|Indie+Flower|Kalam|Kaushan+Script|Odibee+Sans|Righteous|Roboto+Mono:300i|Satisfy|Shadows+Into+Light|Trade+Winds&display=swap" rel="stylesheet">
 
 <script src='../JavaScript/HomePageController.js'></script>
 <link rel='stylesheet' href="../CSS/homeStyleSheet.css">
@@ -19,7 +20,7 @@
         <button class="glyphicon glyphicon-align-right" id="alignImages" onclick="rightP();"></button>
         <button class="glyphicon glyphicon-align-justify" id="alignImages" onclick="justifyP();"></button>
         <div class="sliderSize">
-          <select style="color:black; text-align:ccenter;" ng-init="fontTypes='Comic Sans MS'" ng-model="fontTypes" ng-options="font for font in fonts"></select>
+          <select style="color:black; text-align:ccenter;" ng-init="fontTypes='Satisfy'" ng-model="fontTypes" ng-options="font for font in fonts"></select>
           <input type="range" min="12" max="100" value="20" style="margin:3%;" ng-init="fontSize=20" ng-model="fontSize" class="slider" id="myRange">
           <p>Font Size: {{fontSize}}<span id="demo"></span></p>
         </div>

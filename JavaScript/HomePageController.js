@@ -1,6 +1,6 @@
 var app = angular.module('myApp', []);
 app.controller('homeController', function($scope) {
-  $scope.fonts = ["Times New Roman", "Comic Sans MS", "Impact"];
+  $scope.fonts = ['Roboto Mono','Odibee Sans','Trade Winds','Indie Flower','Dancing Script','Shadows Into Light','Righteous','Amatic SC','Kaushan Script','Kalam','Satisfy','ABeeZee','Cormorant Garamond'];
 
   setInterval(function(){ 
     content = document.getElementById("myP").innerHTML;
