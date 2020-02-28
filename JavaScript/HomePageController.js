@@ -18,21 +18,21 @@ app.controller('homeController', function($scope) {
     });
   });
 
-function centerP() {
-  document.getElementById("contentArea").style.textAlign = "center";
-}
+  $scope.centerP = function() {
+    document.getElementById("contentArea").style.textAlign = "center";
+  }
 
-function leftP() {
-  document.getElementById("contentArea").style.textAlign = "left";
-}
+  $scope.leftP = function() {
+    document.getElementById("contentArea").style.textAlign = "left";
+  }
 
-function rightP() {
-  document.getElementById("contentArea").style.textAlign = "right";
-}
+  $scope.rightP = function() {
+    document.getElementById("contentArea").style.textAlign = "right";
+  }
 
-function justifyP() {
-  document.getElementById("contentArea").style.textAlign = "justify";
-}
+  $scope.justifyP = function() {
+    document.getElementById("contentArea").style.textAlign = "justify";
+  }
 
 //--------------------
 // End of homeContoller
