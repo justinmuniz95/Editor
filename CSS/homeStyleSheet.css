@@ -7,11 +7,30 @@ p:empty:not(:focus)::before {
   content: attr(data-placeholder);
 }
 
+#contentArea{
+  font-weight:bold;
+  width:100%;
+  height:1000px;
+}
 
-#iconBar{
-  background-color:black;
-  color:white;
+#title{
+  font-weight:bold;
+  font-size:24px;
+  border: 0px;
+  position:relative;
+  display:block;
+  margin : 0 auto;
+  width:100%;
   text-align:center;
+ }
+
+.iconBar{
+  background-color: #404040;
+  color: white;
+  width: 100%;
+  margin: 0px;
+  text-align:center;
+  display: inline-block;
 }
 
 #alignImages{
@@ -19,37 +38,47 @@ p:empty:not(:focus)::before {
   font-size:2em;
 }
 
-::placeholder{
-  color: colorSelect;
-}
-
-#width{
+.width{
+  padding:2%;
   width:50%;
   text-align:center;
   margin: auto;
 }
 
-#random{
-  background: black;
+.sliderSize{
+  padding-left: 4%;
+  padding-right: 4%;
+  width:22%;
+  text-align:center;
+  display: inline-block;
 }
 
-#border{
-  border: 30px solid white;
+.downloadButton{
+  width:20%;
+  display: block;
+  display: inline-block;
+}
+
+.borderArea{
+  padding:0px;
+  margin:0px;
+  background: #595959;
+}
+
+.border{
+  border-left: 200px solid white;
+  border-right: 200px solid white;
   padding: 0px;
-  margin:0;
+  margin:0px;
   clear:none;
   inline:block;
   vertical-align: bottom;
-}
-
-// for slider Css from w3Schools
-.slidecontainer {
-  width:20%;
+  border-style: solid;
+  border-color: #595959;
 }
 
 .slider {
   -webkit-appearance: none;
-  width: 100%;
   height: 15px;
   border-radius: 5px;
   background: #d3d3d3;
@@ -81,10 +110,10 @@ p:empty:not(:focus)::before {
   cursor: pointer;
 }
 
-#fontColor{
+#fontColorIcon{
   cursor: pointer;
 }
 
-#backgroundColor{
+#backgroundColorIcon{
   cursor: pointer;
 }
