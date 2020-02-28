@@ -13,16 +13,16 @@
   <div ng-app="myApp" ng-controller="homeController" class="border">
     <div class="borderArea">
       <div class="iconBar" style="padding:1%;" ng-init="colorSelect='#000000'" >
-        <input id="fontColor" class="witdh glyphicon glyphicon-text-color" style="color:{{colorSelect}}; background:white;" type="color" ng-model="colorSelect"></input>
-        <input id="backgroundColor width" type="color" style="color:{{backgroundColorSelect}}; background:white;" class="glyphicon glyphicon-text-background" ng-init="backgroundColorSelect='#ffffff'" ng-model="backgroundColorSelect"></input>
+        <input id="fontColorIcon" class="witdh glyphicon glyphicon-text-color" style="color:{{colorSelect}}; background:#ffffff;" type="color" ng-model="colorSelect"></input>
+        <input id="backgroundColorIcon width" type="color" style="color:{{backgroundColorSelect}}; background:#ffffff;" class="glyphicon glyphicon-text-background" ng-init="backgroundColorSelect='#ffffff'" ng-model="backgroundColorSelect"></input>
         <button class="glyphicon glyphicon-align-left" id="alignImages" onclick="leftP();"></button>
         <button class="glyphicon glyphicon-align-center" id="alignImages" onclick="centerP();"></button>
         <button class="glyphicon glyphicon-align-right" id="alignImages" onclick="rightP();"></button>
         <button class="glyphicon glyphicon-align-justify" id="alignImages" onclick="justifyP();"></button>
         <div class="sliderSize">
-          <select style="color:black; text-align:ccenter;" ng-init="fontTypes='Satisfy'" ng-model="fontTypes" ng-options="font for font in fonts"></select>
+          <select style="color:#000000; text-align:ccenter;" ng-init="fontTypes='Times'" ng-model="fontTypes" ng-options="font for font in fonts"></select>
           <input type="range" min="12" max="100" value="20" style="margin:3%;" ng-init="fontSize=20" ng-model="fontSize" class="slider" id="myRange">
-          <p>Font Size: {{fontSize}}<span id="demo"></span></p>
+          <p>Font Size: {{fontSize}}<span id="fontSizeAdjust"></span></p>
         </div>
         <div class="downloadButton">
           <a class="word-export glyphicon glyphicon-download" style="font-size: 2em;" href="javascript:void(0)">Download</a>
@@ -32,9 +32,9 @@
     </head>
     <body>
       <div id="page-content">
-        <h1 ng-show="false" style="text-align:center" ng-model="fileName">{{fileName}}</h1>
-        <input placeholder="Input title here" style="font-weight:bold; font-size:24px; position:relative; display:block; margin : 0 auto; width:100%; text-align:center; color: {{colorSelect}}; background-color: {{backgroundColorSelect}};" ng-model="fileName"></input>
-        <p id="myP" contenteditable data-placeholder="Start typing your new project here!" style="font-size:{{fontSize}}px; font-family: {{fontTypes}}; font-weight:bold; color: {{colorSelect}}; background-color: {{backgroundColorSelect}}; width:100%; height:1000px"></p>
+        <h1 ng-show="false" style="text-align:center" style="color: {{colorSelect}}; background-color: {{backgroundColorSelect}};" ng-model="fileName">{{fileName}}</h1>
+        <input id="title" placeholder="Input title here" style="color: {{colorSelect}}; background-color: {{backgroundColorSelect}};" ng-model="fileName"></input>
+        <p id="contentArea" contenteditable data-placeholder="Start typing your new project here!" style="font-size:{{fontSize}}px; font-family: {{fontTypes}}; color: {{colorSelect}}; background-color: {{backgroundColorSelect}};"></p>
 
       </div>
     </div>

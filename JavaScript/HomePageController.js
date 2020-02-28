@@ -1,9 +1,9 @@
 var app = angular.module('myApp', []);
 app.controller('homeController', function($scope) {
-  $scope.fonts = ['Roboto Mono','Odibee Sans','Trade Winds','Indie Flower','Dancing Script','Shadows Into Light','Righteous','Amatic SC','Kaushan Script','Kalam','Satisfy','ABeeZee','Cormorant Garamond'];
+  $scope.fonts = ['Times', 'Roboto Mono','Odibee Sans','Trade Winds','Indie Flower','Dancing Script','Shadows Into Light','Righteous','Amatic SC','Kaushan Script','Kalam','Satisfy','ABeeZee','Cormorant Garamond'];
 
   setInterval(function(){ 
-    content = document.getElementById("myP").innerHTML;
+    content = document.getElementById("contentArea").innerHTML;
     if (content != "") {
       document.getElementById("wordCountId").innerHTML = "Word Count: " + content.split(" ").length;
     } else {
@@ -18,20 +18,23 @@ app.controller('homeController', function($scope) {
     });
   });
 
-});
-
 function centerP() {
-  document.getElementById("myP").style.textAlign = "center";
+  document.getElementById("contentArea").style.textAlign = "center";
 }
 
 function leftP() {
-  document.getElementById("myP").style.textAlign = "left";
+  document.getElementById("contentArea").style.textAlign = "left";
 }
 
 function rightP() {
-  document.getElementById("myP").style.textAlign = "right";
+  document.getElementById("contentArea").style.textAlign = "right";
 }
 
 function justifyP() {
-  document.getElementById("myP").style.textAlign = "justify";
+  document.getElementById("contentArea").style.textAlign = "justify";
 }
+
+//--------------------
+// End of homeContoller
+//
+});

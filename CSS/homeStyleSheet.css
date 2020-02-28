@@ -7,11 +7,21 @@ p:empty:not(:focus)::before {
   content: attr(data-placeholder);
 }
 
-.pageHolder{ 
-  overflow: auto; 
-  width: 100%; 
-} 
+#contentArea{
+  font-weight:bold;
+  width:100%;
+  height:1000px;
+}
 
+#title{
+  font-weight:bold;
+  font-size:24px;
+  position:relative;
+  display:block;
+  margin : 0 auto;
+  width:100%;
+  text-align:center;
+ }
 
 .iconBar{
   background-color: #404040;
@@ -25,10 +35,6 @@ p:empty:not(:focus)::before {
 #alignImages{
   color:black;
   font-size:2em;
-}
-
-::placeholder{
-  color: colorSelect;
 }
 
 .width{
@@ -53,7 +59,7 @@ p:empty:not(:focus)::before {
 }
 
 .borderArea{
-  padding:0px; 
+  padding:0px;
   margin:0px;
   background: #595959;
 }
@@ -66,7 +72,7 @@ p:empty:not(:focus)::before {
   clear:none;
   inline:block;
   vertical-align: bottom;
-  border-style: solid; 
+  border-style: solid;
   border-color: #595959;
 }
 
@@ -103,10 +109,10 @@ p:empty:not(:focus)::before {
   cursor: pointer;
 }
 
-#fontColor{
+#fontColorIcon{
   cursor: pointer;
 }
 
-#backgroundColor{
+#backgroundColorIcon{
   cursor: pointer;
 }
