@@ -2,7 +2,7 @@ var app = angular.module('myApp', []);
 app.controller('homeController', function($scope) {
   $scope.fonts = ['Times', 'Roboto Mono','Odibee Sans','Trade Winds','Indie Flower','Dancing Script','Shadows Into Light','Righteous','Amatic SC','Kaushan Script','Kalam','Satisfy','ABeeZee','Cormorant Garamond'];
 
-  setInterval(function(){ 
+  setInterval(function() {
     content = document.getElementById("contentArea").innerHTML;
     if (content != "") {
       document.getElementById("wordCountId").innerHTML = "Word Count: " + content.split(" ").length;
@@ -18,21 +18,21 @@ app.controller('homeController', function($scope) {
     });
   });
 
-function centerP() {
-  document.getElementById("contentArea").style.textAlign = "center";
-}
+  $scope.centerP = function() {
+    document.getElementById("contentArea").style.textAlign = "center";
+  }
 
-function leftP() {
-  document.getElementById("contentArea").style.textAlign = "left";
-}
+  $scope.leftP = function() {
+    document.getElementById("contentArea").style.textAlign = "left";
+  }
 
-function rightP() {
-  document.getElementById("contentArea").style.textAlign = "right";
-}
+  $scope.rightP = function() {
+    document.getElementById("contentArea").style.textAlign = "right";
+  }
 
-function justifyP() {
-  document.getElementById("contentArea").style.textAlign = "justify";
-}
+  $scope.justifyP = function() {
+    document.getElementById("contentArea").style.textAlign = "justify";
+  }
 
 //--------------------
 // End of homeContoller
