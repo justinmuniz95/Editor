@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../plugins/FileSaver.js"></script>
-<script src="../plugins/jquery.wordexport.js"></script>
+<script src="static/plugins/FileSaver.js"></script>
+<script src="static/plugins/jquery.wordexport.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
 <link href="https://fonts.googleapis.com/css?family=ABeeZee|Amatic+SC|Cormorant+Garamond|Dancing+Script|Indie+Flower|Kalam|Kaushan+Script|Odibee+Sans|Righteous|Roboto+Mono:300i|Satisfy|Shadows+Into+Light|Trade+Winds&display=swap" rel="stylesheet">
 
-<script src='../JavaScript/HomePageController.js'></script>
-<link rel='stylesheet' href="../CSS/homeStyleSheet.css">
+<script src='static/javascript/HomePageController.js'></script>
+<link rel='stylesheet' href="static/css/homeStyleSheet.css">
 <head>
   <div ng-app="myApp" ng-controller="homeController" class="border">
     <div class="borderArea">
@@ -22,7 +22,7 @@
         <div class="sliderSize">
           <select style="color:#000000; text-align:ccenter;" ng-init="fontTypes='Times'" ng-model="fontTypes" ng-options="font for font in fonts"></select>
           <input type="range" min="12" max="100" value="20" style="margin:3%;" ng-init="fontSize=20" ng-model="fontSize" class="slider" id="myRange">
-          <p>Font Size: {{fontSize}}<span id="fontSizeAdjust"></span></p>
+          <p>Font Size: {{'{{fontSize}}'}}<span id="fontSizeAdjust"></span></p>
         </div>
         <div class="downloadButton">
           <a class="word-export glyphicon glyphicon-download" style="font-size: 2em;" href="javascript:void(0)">Download</a>
@@ -32,9 +32,9 @@
     </head>
     <body>
       <div id="page-content">
-        <h1 contenteditable="true" ng-show="false" style="font-family: {{fontTypes}}; text-align:center; font-weight:bold; color: {{colorSelect}}; background-color: {{backgroundColorSelect}};">{{fileName}}</h1>
-        <input id="title" placeholder="Input title here" style="font-family: {{fontTypes}}; color: {{colorSelect}}; background-color: {{backgroundColorSelect}};" ng-model="fileName"></input>
-        <p id="contentArea" contenteditable data-placeholder="Start typing your new project here!" style="font-size:{{fontSize}}px; font-family: {{fontTypes}}; color: {{colorSelect}}; background-color: {{backgroundColorSelect}};"></p>
+        <h1 contenteditable="true" ng-show="false" style="font-family: {{'{{fontTypes}}'}}; text-align:center; font-weight:bold; color: {{'{{colorSelect}}'}}; background-color: {{'{{backgroundColorSelect}}'}};">{{'{{fileName}}'}}</h1>
+        <input id="title" placeholder="Input title here" style="font-family: {{'{{fontTypes}}'}}; color: {{'{{colorSelect}}'}}; background-color: {{'{{backgroundColorSelect}}'}};" ng-model="fileName"></input>
+        <p id="contentArea" contenteditable data-placeholder="Start typing your new project here!" style="font-size:{{'{{fontSize}}'}}px; font-family: {{'{{fontTypes}}'}}; color: {{'{{colorSelect}}'}}; background-color: {{'{{backgroundColorSelect}}'}};"></p>
 
       </div>
     </div>
