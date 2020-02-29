@@ -2,7 +2,6 @@
 from flask import Flask, request, jsonify, render_template
 from service import EditorService
 from models import Schema
-import os
 import requests
 import json
 

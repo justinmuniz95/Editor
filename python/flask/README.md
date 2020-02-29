@@ -1,11 +1,15 @@
 # Editor Application
 
-[Modified code from](https://medium.com/@bhavaniravi/build-your-1st-python-web-app-with-flask-b039d11f101c)
+[This code has been modified to work for the Editor Application click to go to original repo](https://github.com/bhavaniravi/flask-tutorial/)
+
+### To Run App
+1. Have python installed on your machine
+2. Python modules needed to run: flask, requests, json
+3. If not already in directory navigate to git/Editor/python/flask
+3. To start application run `./app/app.py`
 
 ### To Run App in Docker
-
-1. Checkout `Dockerfile`. It is created by [following this tutorial](https://runnable.com/docker/python/dockerize-your-flask-application).
-2. I have changed it to accomodate latest version of ununtu and `python3`
-3. To build docker image `docker build -t todo-flask:latest .`
-4. To run the docker container `docker run -it -p 5000:8888 Editor-flask `
+1. Running as a docker images hasn't been tested just started migrating over to web application.
+2. To build docker image `docker build -t editor-flask:latest .`
+2. To run the docker container `docker run -it -p 5000:8888 editor-flask `
 
